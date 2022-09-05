@@ -1,0 +1,30 @@
+.divContenerPrincipal {
+  display: flex;
+  flex-direction: column;
+  background-color: #9ed2c6;
+  justify-content: center;
+
+  width: 550px;
+  height: 600px;
+  padding: 50px;
+}
+h1 {
+  color: #54bab9;
+}
+.divHeader {
+  align-content: center;
+  background-color: #e9dac1;
+  text-align: center;
+  font-style: inherit;
+  width: 550px;
+  height: 100px;
+  padding-top: 10px;
+}
+.divBoton {
+  flex-direction: row;
+  justify-content: center;
+  width: 550px;
+  height: 100px;
+  padding: 10px;
+  padding-left: 140px;
+}
