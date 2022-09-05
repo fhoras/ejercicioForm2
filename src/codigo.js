@@ -43,15 +43,29 @@ botonAgregar.addEventListener("click", () => {
   cantidadArray.push(cantidad);
   console.log(productosArray);
   console.log(cantidadArray);
-  console.log(nombre);
 });
+function mostrarSuma(suma) {
+  let mostrarTotal = Number(suma);
+  let resultado = document.getElementById("resultado");
+  resultado.innerHTML = "";
+  let datoParrafo = document.createElement("p");
 
-botonSumar.addEventListener("click", (cantidadArray) => {
-  // Cuando hace clic en sumar
+  datoParrafo.innerText = "La cantidad total de productos es: " + mostrarTotal;
+  resultado.appendChild(datoParrafo);
+}
+
+function sumarElemento(cantidadArray) {
   let cantidadElemento = cantidadArray.length;
-  let suma = 0;
-  for (let i = 0; i <= cantidadElemento; i++) {
-    suma = suma + cantidadArray[i];
+  let suma = Number(0);
+  for (let i = 0; i < cantidadElemento; i++) {
+    suma = suma + Number(cantidadArray[i]);
   }
-  console.log(suma);
+  mostrarSuma(suma);
+  return suma;
+}
+
+botonSumar.addEventListener("click", () => {
+  // Cuando hace clic en sumar
+  console.log(sumarElemento(cantidadArray));
+  // Mostrar en pantalla la suma total de elementos
 });
